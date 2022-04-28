@@ -3,7 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import Navbar from "./components/Navbar";
 import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import Nav from "./components/Navbar/Nav";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { initialAccount } from "./redux/AccountSlice";
 
 
@@ -11,7 +11,6 @@ import { initialAccount } from "./redux/AccountSlice";
 function App() {
 
   const {isDarkMode} = useAppSelector(state => state.theme);
-  const {user} = useAppSelector(state => state.accounts)
   const dispatch = useAppDispatch();
 
   async function setUserAccounts() {
@@ -29,6 +28,7 @@ function App() {
 
   useEffect(() => {
     setUserAccounts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
   return (

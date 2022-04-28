@@ -9,6 +9,7 @@
       {
         "account_id": "1d74d7db-643b-4058-9b41-a26bf4e59d4b",
         "balance": "$1,294.64",
+        "account_name": "Personal",
         "transactions": [
          {
            "origin": "1d74d7db-643b-4058-9b41-a26bf4e59d4b",
@@ -22,6 +23,7 @@
       {
         "account_id": "32765847-e950-4e6e-816c-763f15c9422f",
         "balance": "$2,491.13",
+        "account_name": "Investment",
         "transactions": [
           {
             "origin": "1d74d7db-643b-4058-9b41-a26bf4e59d4b",

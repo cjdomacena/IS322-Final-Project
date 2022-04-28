@@ -3,6 +3,7 @@ import type { RootState } from './store';
 
 interface IAccount {
   account_id: string;
+  account_name: string,
   balance: string;
   transactions: ITransactions[]
 }
@@ -37,6 +38,7 @@ const initialState: {user: IUser} | null = {
     {
       account_id: '',
       balance: '',
+      account_name: '',
       transactions: [
         {
           amount: 0.00,
