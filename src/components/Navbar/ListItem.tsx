@@ -3,6 +3,7 @@ type Props = {
   text: string;
   path: string;
   svgIcon: JSX.Element;
+  minimized: boolean
 };
 
 const ListItem = (props: Props) => {
@@ -10,11 +11,11 @@ const ListItem = (props: Props) => {
   const match = useMatch({ path: resolved.pathname, end: true });
 
   return (
-    <Link to={props.path}>
+    <Link to={props.path} title={props.text}>
       <li
-        className={`p-2 dark:hover:bg-neutral-900 rounded hover:bg-gray-300 text-neutral-800 dark:text-white transition-colors my-2 flex items-center gap-2 ${match ? ' dark:bg-neutral-900 bg-gray-300 font-bold' : null}`}>
+        className={`p-2 dark:hover:bg-neutral-900 rounded hover:bg-gray-300 transition-colors my-2 flex items-center gap-2  ${match ? ' dark:bg-neutral-900 bg-gray-300 font-bold dark:text-neutral-50 text-neutral-900' : 'text-neutral-500 dark:text-neutral-500'} ${props.minimized ? 'w-fit' : 'w-auto'}`}>
           {props.svgIcon}
-          {props.text}
+        {props.minimized ? null : props.text}
       </li>
     </Link>
   );

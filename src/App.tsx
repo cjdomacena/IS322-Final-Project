@@ -32,7 +32,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className={isDarkMode ? 'dark' : ''}>
+    <div>
       <div className="App min-h-screen w-screen dark:bg-[#0c0c0c] transition-colors flex">
         <Navbar />
         <div className="flex-grow">
