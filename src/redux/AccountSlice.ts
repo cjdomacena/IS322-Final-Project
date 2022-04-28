@@ -1,18 +1,19 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-interface IAccount {
+export interface IAccount {
   account_id: string;
   account_name: string,
   balance: string;
   transactions: ITransactions[]
 }
 
-interface ITransactions {
+export interface ITransactions {
 	amount: number,
 	origin: string,
 	destination: string,
 	description: string,
-	type: string
+	type: string,
+  created_at: Date | string
 }
 
 interface IUser  {
@@ -27,28 +28,31 @@ interface IUser  {
 
 
 
-const initialState: {user: IUser} | null = {
-  user: {_id: '',
-  name: '',
-  email: '',
-  phone: '',
-  address: '',
-  accounts: [
-    {
-      account_id: '',
-      balance: '',
-      account_name: '',
-      transactions: [
-        {
-          amount: 0.00,
-          origin: "",
-          destination: "",
-          description: "",
-          type: "",
-        },
-      ],
-    },
-  ],}
+const initialState: { user: IUser } | null = {
+  user: {
+    _id: '',
+    name: '',
+    email: '',
+    phone: '',
+    address: '',
+    accounts: [
+      {
+        account_id: '',
+        balance: '',
+        account_name: '',
+        transactions: [
+          {
+            amount: 0.0,
+            origin: '',
+            destination: '',
+            description: '',
+            type: '',
+            created_at: '',
+          },
+        ],
+      },
+    ],
+  },
 };
 
 export const accountSlice = createSlice({
