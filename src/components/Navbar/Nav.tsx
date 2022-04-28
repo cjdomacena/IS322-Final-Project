@@ -13,6 +13,11 @@ const Nav = (props: Props) => {
 
  const handleToggle = () => {
 	 dispatch(toggleDarkMode())
+
+  const bodyTag = document.getElementsByTagName('BODY')[0]
+    bodyTag.classList.toggle('dark');
+    bodyTag.classList.toggle('bg-[#0c0c0c]');
+   
  }
 
   return (
