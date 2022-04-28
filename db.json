@@ -1,5 +1,5 @@
  {
-    "_id": "626a0c2095952accd282bcdf",
+    ["_id": "626a0c2095952accd282bcdf",
     "name": "Carey Clark",
     "email": "careyclark@enaut.com",
     "phone": "+1 (853) 417-2160",
@@ -40,5 +40,6 @@
         "balance": "$642.00"
       }
     ]
-  }
+]
+}
 
