@@ -6,7 +6,7 @@ type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <aside className="h-screen w-72 border-r dark:border-r-neutral-800 shadow-sm">
+    <aside className="h-screen w-64 border-r dark:border-r-neutral-800 shadow-sm">
       <div className="px-4 py-8 h-full">
         <div>
           <h1 className="font-bold text-xl text-neutral-800 dark:text-neutral-50 px-4">My Account</h1>
