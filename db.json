@@ -8,32 +8,37 @@
     "accounts": [
       {
         "account_id": "1d74d7db-643b-4058-9b41-a26bf4e59d4b",
-        "balance": "$1,294.64"
+        "balance": "$1,294.64",
+        "transactions": [
+         {
+           "origin": "1d74d7db-643b-4058-9b41-a26bf4e59d4b",
+           "destination": "32765847-e950-4e6e-816c-763f15c9422f",
+           "amount": -520.00,
+           "description": "Bills Payment",
+           "type": "Transfer"
+         }
+        ]
       },
       {
         "account_id": "32765847-e950-4e6e-816c-763f15c9422f",
-        "balance": "$2,491.13"
+        "balance": "$2,491.13",
+        "transactions": [
+          {
+            "origin": "1d74d7db-643b-4058-9b41-a26bf4e59d4b",
+            "destination": "32765847-e950-4e6e-816c-763f15c9422f",
+            "amount": 520.0,
+            "description": "Bills Payment",
+            "type": "Receive"
+          }
+        ]
       },
       {
         "account_id": "0ade7bba-9ccd-49d8-aa8b-0ee4c522077e",
         "balance": "$3,573.12"
-      }
-    ],
-    "transactions": [
-      {
-        "account_id": "a715e28b-e090-4238-a1d4-913cb50208fc",
-        "amount": "$948.32",
-        "type": "Transfer"
-      },
-      {
-        "account_id": "4a45c30c-c6c4-4b04-aa13-1f1524942e55",
-        "amount": "$253.02",
-        "type": "Transfer"
       },
       {
         "account_id": "094ddec7-d6ad-4770-8c9a-62a8f69bc3c9",
-        "amount": "$488.93",
-        "type": "Transfer"
+        "balance": "$642.00"
       }
     ]
   }
