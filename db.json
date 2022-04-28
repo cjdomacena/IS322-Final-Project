@@ -36,11 +36,15 @@
       },
       {
         "account_id": "0ade7bba-9ccd-49d8-aa8b-0ee4c522077e",
-        "balance": "$3,573.12"
+        "balance": "$3,573.12",
+        "account_name": "Savings",
+        "transactions": []
       },
       {
         "account_id": "094ddec7-d6ad-4770-8c9a-62a8f69bc3c9",
-        "balance": "$642.00"
+        "balance": "$642.00",
+        "account_name": "Leisure",
+        "transactions": []
       }
     ]
   }
