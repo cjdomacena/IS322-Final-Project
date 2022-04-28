@@ -1,4 +1,3 @@
-import { IAccount } from '../redux/AccountSlice';
 import { useAppSelector } from '../redux/hooks';
 
 type Props = {};
