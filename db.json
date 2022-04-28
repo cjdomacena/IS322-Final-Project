@@ -1,5 +1,5 @@
-[
-  {
+{
+  "user": {
     "_id": "626a0c2095952accd282bcdf",
     "name": "Carey Clark",
     "email": "careyclark@enaut.com",
@@ -42,4 +42,4 @@
       }
     ]
   }
-]
+}
