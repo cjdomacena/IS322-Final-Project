@@ -9,8 +9,6 @@ export interface IAccount {
 
 export interface ITransactions {
 	amount: number,
-	origin: string,
-	destination: string,
 	description: string,
 	type: string,
   created_at: Date | string
@@ -43,8 +41,6 @@ const initialState: { user: IUser } | null = {
         transactions: [
           {
             amount: 0.0,
-            origin: '',
-            destination: '',
             description: '',
             type: '',
             created_at: '',
