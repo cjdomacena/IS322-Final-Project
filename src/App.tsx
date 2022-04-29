@@ -1,16 +1,15 @@
 import Dashboard from "./pages/Dashboard";
 import {Routes, Route} from 'react-router-dom'
 import Navbar from "./components/Navbar";
-import { useAppDispatch, useAppSelector } from "./redux/hooks";
+import { useAppDispatch } from "./redux/hooks";
 import Nav from "./components/Navbar/Nav";
 import { useEffect } from "react";
 import { initialAccount } from "./redux/AccountSlice";
+import Accounts from "./pages/Accounts";
 
 
 
 function App() {
-
-  const {isDarkMode} = useAppSelector(state => state.theme);
   const dispatch = useAppDispatch();
 
   async function setUserAccounts() {
@@ -39,6 +38,7 @@ function App() {
           <Nav/>
           <Routes>
             <Route path="/" element={<Dashboard />}></Route>
+            <Route path="/accounts" element={<Accounts />}></Route>
           </Routes>
         </div>
       </div>
