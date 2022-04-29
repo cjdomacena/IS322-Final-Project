@@ -6,6 +6,7 @@ import Nav from "./components/Navbar/Nav";
 import { useEffect } from "react";
 import { initialAccount } from "./redux/AccountSlice";
 import Accounts from "./pages/Accounts";
+import Transactions from "./pages/Transactions";
 
 
 
@@ -35,10 +36,11 @@ function App() {
       <div className="App min-h-screen w-screen dark:bg-[#0c0c0c] transition-colors flex">
         <Navbar />
         <div className="flex-grow">
-          <Nav/>
+          <Nav />
           <Routes>
-            <Route path="/" element={<Dashboard />}></Route>
-            <Route path="/accounts" element={<Accounts />}></Route>
+            <Route path="/" element={<Dashboard />}/>
+            <Route path="/accounts" element={<Accounts />} />
+            <Route path="/accounts/:id" element={<Transactions />} />
           </Routes>
         </div>
       </div>
