@@ -10,9 +10,8 @@ const Dashboard = (props: Props) => {
 
   const getAccountBalances = (accounts: IAccount[]) => {
     const balances = accounts.map((t) => t.balance);
-    const totalBalance = balances.reduce((acc, balance) => acc += balance )
-
-    return formatNumber(Number(totalBalance));
+    const totalBalance = balances.reduce((acc:number, balance) => acc += balance, 0);
+    return formatNumber(totalBalance);
   };
 
   const getAccountNames = (accounts: IAccount[]) => {

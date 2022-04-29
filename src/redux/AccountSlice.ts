@@ -3,7 +3,7 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 export interface IAccount {
   account_id: string;
   account_name: string,
-  balance: string;
+  balance: number;
   transactions: ITransactions[]
 }
 
@@ -11,7 +11,7 @@ export interface ITransactions {
 	amount: number,
 	description: string,
 	type: string,
-  created_at: Date | string
+  created_at: number
 }
 
 interface IUser  {
@@ -36,14 +36,14 @@ const initialState: { user: IUser } | null = {
     accounts: [
       {
         account_id: '',
-        balance: '',
+        balance: 0.00,
         account_name: '',
         transactions: [
           {
             amount: 0.0,
             description: '',
             type: '',
-            created_at: '',
+            created_at: 0,
           },
         ],
       },
@@ -78,8 +78,7 @@ export const accountSlice = createSlice({
         default: 
           newBalance = prevBalance;
       }
-      keepProps.amount = newBalance;
-
+      tempState.accounts[index].balance = newBalance
       tempState.accounts[index].transactions.push(keepProps);
       state.user = tempState;
     }

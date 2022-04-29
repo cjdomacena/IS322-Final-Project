@@ -46,7 +46,7 @@ const TRowItem = ({props}:TRowProps) => {
           {formatNumber(props.amount)}
         </p>
       </td>
-      <td className="px-2 py-4">{formatDate(new Date(props.created_at.toString()))}</td>
+      <td className="px-2 py-4">{formatDate(props.created_at)}</td>
     </tr>
   );
 }

@@ -1,11 +1,9 @@
 import { IAccount, ITransactions } from './redux/AccountSlice';
-export const formatCurrency = (currency: string) => {
-	const preFormatCurrency = Number(currency.slice(1).split(',').join(''));
-
+export const formatCurrency = (currency: number) => {
 	return new Intl.NumberFormat('en-US', {
     currency: 'USD',
     style: 'currency',
-  }).format(preFormatCurrency);
+  }).format(currency);
 }
 
 export const formatNumber = (amount:number) => {
@@ -15,8 +13,11 @@ export const formatNumber = (amount:number) => {
     }).format(amount);
 }
 
-export const formatDate = (dateString: Date) => {
-  return Intl.DateTimeFormat('en-US', { timeStyle: 'short', dateStyle: 'medium' }).format(new Date(dateString))
+export const formatDate = (dateString: number) => {
+
+  const d = new Date(dateString * 1000)
+
+  return Intl.DateTimeFormat('en-US', { timeStyle: 'short', dateStyle: 'medium' }).format(d);
 }
 
 export const getRecentTransactions = (accounts: IAccount[]) => {
