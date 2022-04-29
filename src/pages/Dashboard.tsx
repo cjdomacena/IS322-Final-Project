@@ -9,8 +9,9 @@ const Dashboard = (props: Props) => {
   const { user } = useAppSelector((state) => state.accounts);
 
   const getAccountBalances = (accounts: IAccount[]) => {
-    const balances = accounts.map((t) => t.balance);
+    const balances = accounts.map((t) => Number(t.balance));
     const totalBalance = balances.reduce((acc:number, balance) => acc += balance, 0);
+    console.log(totalBalance)
     return formatNumber(totalBalance);
   };
 
