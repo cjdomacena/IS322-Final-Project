@@ -1,6 +1,7 @@
 import { IAccount } from '../redux/AccountSlice';
 import { useAppSelector } from '../redux/hooks';
 import TransactionTable from '../components/Table/TransactionTable';
+import { formatNumber } from '../utils';
 
 type Props = {};
 
@@ -8,19 +9,17 @@ const Dashboard = (props: Props) => {
   const { user } = useAppSelector((state) => state.accounts);
 
   const getAccountBalances = (accounts: IAccount[]) => {
-    const balances = accounts.map((t) => Number(t.balance.slice(1).split(',').join('')));
-    const totalBalance = balances.reduce((acc, b) => (acc += b), 0);
+    const balances = accounts.map((t) => t.balance);
+    const totalBalance = balances.reduce((acc, balance) => acc += balance )
 
-    return new Intl.NumberFormat(`en-US`, {
-      currency: 'USD',
-      style: 'currency',
-    }).format(totalBalance);
+    return formatNumber(Number(totalBalance));
   };
 
   const getAccountNames = (accounts: IAccount[]) => {
     const accountNames = accounts.map((t) => t.account_name);
     return accountNames;
   };
+
 
   return (
     <main className="w-auto h-auto xl:p-12 lg:p-12 md:p-8 p-4 dark:text-neutral-50 text-neutral-900">

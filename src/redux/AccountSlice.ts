@@ -57,10 +57,35 @@ export const accountSlice = createSlice({
 	reducers: {
 		initialAccount: (state, action: PayloadAction<IUser>) => {
 			state.user = {...action.payload}
-		}
+		},
+    depositToAccount: (state, action:PayloadAction<ITransactions & {account_id: string}>) => {
+      let tempState = state.user;
+
+      // Get index of the account to be modified
+      const index = tempState.accounts.findIndex((account) => account.account_id === action.payload.account_id)
+
+      // Removed the account_id from the payload given
+      let {account_id, ...keepProps} = action.payload;
+      let prevBalance = Number(state.user.accounts[index].balance);
+      let newBalance
+      switch (keepProps.type.toLowerCase()) {
+        case 'withdraw': 
+           newBalance = prevBalance - keepProps.amount;
+           break;
+        case 'deposit': 
+            newBalance = prevBalance + keepProps.amount;
+            break;
+        default: 
+          newBalance = prevBalance;
+      }
+      keepProps.amount = newBalance;
+
+      tempState.accounts[index].transactions.push(keepProps);
+      state.user = tempState;
+    }
 	}
 })
 
-export const { initialAccount } = accountSlice.actions;
+export const { initialAccount, depositToAccount } = accountSlice.actions;
 
 export default accountSlice.reducer;

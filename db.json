@@ -8,7 +8,7 @@
     "accounts": [
       {
         "account_id": "1d74d7db-643b-4058-9b41-a26bf4e59d4b",
-        "balance": "$1,294.64",
+        "balance": "1,294.64",
         "account_name": "Personal",
         "transactions": [
          {
@@ -21,7 +21,7 @@
       },
       {
         "account_id": "32765847-e950-4e6e-816c-763f15c9422f",
-        "balance": "$2,491.13",
+        "balance": "2,491.13",
         "account_name": "Investment",
         "transactions": [
           {
@@ -34,7 +34,7 @@
       },
       {
         "account_id": "0ade7bba-9ccd-49d8-aa8b-0ee4c522077e",
-        "balance": "$3,573.12",
+        "balance": "3,573.12",
         "account_name": "Savings",
         "transactions": [
             {
@@ -53,7 +53,7 @@
       },
       {
         "account_id": "094ddec7-d6ad-4770-8c9a-62a8f69bc3c9",
-        "balance": "$642.00",
+        "balance": "642.00",
         "account_name": "Leisure",
         "transactions": []
       }

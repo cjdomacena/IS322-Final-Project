@@ -1,7 +1,6 @@
 import ListItem from './ListItem'
 import {RiDashboardLine} from 'react-icons/ri';
 import {BsWallet2, BsPlusLg} from 'react-icons/bs';
-import {AiOutlineTransaction} from 'react-icons/ai'
 import {GiPayMoney} from 'react-icons/gi'
 import { useState } from 'react';
 import {CgPushLeft, CgPushRight} from 'react-icons/cg'
@@ -46,12 +45,6 @@ const Navbar = (props: Props) => {
             svgIcon={<BsPlusLg />}
             path="/new-transfer"
             text="New Transfer"
-            minimized={minimized}
-          />
-          <ListItem
-            svgIcon={<AiOutlineTransaction />}
-            path="/transactions"
-            text="Transactions"
             minimized={minimized}
           />
         </ul>
