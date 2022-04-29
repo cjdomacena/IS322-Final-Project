@@ -12,12 +12,10 @@
         "account_name": "Personal",
         "transactions": [
          {
-           "origin": "1d74d7db-643b-4058-9b41-a26bf4e59d4b",
-           "destination": "32765847-e950-4e6e-816c-763f15c9422f",
-           "amount": -520.00,
+           "amount": 520.00,
            "description": "Bills Payment",
-           "type": "Transfer",
-           "created_at": "2022-02-07T01:53:58"
+           "type": "Deposit",
+           "created_at": "2022-01-07T01:53:58"
          }
         ]
       },
@@ -27,11 +25,9 @@
         "account_name": "Investment",
         "transactions": [
           {
-            "origin": "1d74d7db-643b-4058-9b41-a26bf4e59d4b",
-            "destination": "32765847-e950-4e6e-816c-763f15c9422f",
-            "amount": 520.0,
+            "amount": -320.0,
             "description": "Bills Payment",
-            "type": "Receive",
+            "type": "Withdraw",
             "created_at": "2022-02-07T01:53:58"
           }
         ]
@@ -40,7 +36,20 @@
         "account_id": "0ade7bba-9ccd-49d8-aa8b-0ee4c522077e",
         "balance": "$3,573.12",
         "account_name": "Savings",
-        "transactions": []
+        "transactions": [
+            {
+              "amount": -120.0,
+              "description": "Bills Payment",
+              "type": "Withdraw",
+              "created_at": "2022-01-07T01:42:58"
+            },
+                 {
+                   "amount": 1020.0,
+                   "description": "Bills Payment",
+                   "type": "Deposit",
+                   "created_at": "2022-02-07T01:21:58"
+                 }
+        ]
       },
       {
         "account_id": "094ddec7-d6ad-4770-8c9a-62a8f69bc3c9",
