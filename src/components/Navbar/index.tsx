@@ -15,7 +15,9 @@ const Navbar = (props: Props) => {
     <aside
       className={`h-screen border-r dark:border-r-neutral-800 shadow-sm relative w-auto xl:block lg:block md:block hidden transition-none`}>
       <div className=" py-8 h-full">
-        <button className="absolute right-4 top-4 rounded-full" onClick={() => toggleMinimized((prev) => !prev)}>
+        <button
+          className="absolute right-4 top-4 rounded-full"
+          onClick={() => toggleMinimized((prev) => !prev)}>
           {' '}
           {minimized ? (
             <CgPushRight className="dark:text-white w-5 h-5" />
@@ -24,7 +26,9 @@ const Navbar = (props: Props) => {
           )}
         </button>
         <div className="px-4">
-          {minimized ? null : (
+          {minimized ? (
+            <GiPayMoney className="dark:text-neutral-50 w-6 h-6 mt-4" />
+          ) : (
             <>
               <GiPayMoney className="dark:text-neutral-50 w-5 h-5" />
               <h1 className="font-bold text-xl text-neutral-800 dark:text-neutral-50">Drop.io</h1>

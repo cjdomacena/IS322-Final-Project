@@ -9,7 +9,7 @@ const TransactionTable = ({accounts}:Props) => {
   const transactions = getRecentTransactions(accounts);
   return (
     <div className="w-full border rounded-sm dark:border-neutral-700 my-4">
-      <table className="w-full ">
+      <table className="w-full xl:table-auto lg:table-auto table-fixed overflow-auto">
         <thead className=" border-b dark:border-b-neutral-700">
           <tr className="text-xs text-left">
             <THeadItem text="Account" />
