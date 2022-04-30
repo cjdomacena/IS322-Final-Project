@@ -4,9 +4,8 @@ import {BsWallet2, BsPlusLg} from 'react-icons/bs';
 import {GiPayMoney} from 'react-icons/gi'
 import { useState } from 'react';
 import {CgPushLeft, CgPushRight} from 'react-icons/cg'
-type Props = {}
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
 
   const [minimized, toggleMinimized] = useState<boolean>(false);
 

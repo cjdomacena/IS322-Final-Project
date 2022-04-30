@@ -3,7 +3,6 @@ import {MdDarkMode, MdLightMode} from 'react-icons/md'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { toggleDarkMode } from '../../redux/ThemeSlice'
 import {BiMenu} from 'react-icons/bi'
-import Navbar from '.'
 import Drawer from './Drawer'
 import { useState } from 'react'
 
